@@ -22,6 +22,7 @@ input:focus {
   outline: none; /* Remove default outline */
   box-shadow: 0 0 5px 2px rgba(92, 184, 92, 0.5); /* Green ring effect */
 }
+
 /* Container for the Todo app */
 div {
   max-width: 600px;
@@ -79,4 +80,50 @@ li:last-child {
 span {
   flex-grow: 1;
   font-size: 16px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Adjust container padding for tablets */
+  div {
+    padding: 15px;
+  }
+
+  /* Adjust input and button sizes */
+  input {
+    padding: 8px;
+  }
+
+  button {
+    padding: 8px 12px;
+  }
+
+  li {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: flex-start; /* Align items to the start */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for mobile devices */
+  div {
+    padding: 10px;
+  }
+
+  input {
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  button {
+    width: 100%; /* Full width buttons */
+    margin: 5px 0; /* Space between buttons */
+  }
+
+  li {
+    padding: 8px; /* Adjust padding for list items */
+  }
+
+  span {
+    font-size: 14px; /* Smaller font size for span */
+  }
 }
